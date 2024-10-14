@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image with Text</title>
+  <style>
+    /* General Styling */
+    body {
+      font-family: 'Trebuchet MS', sans-serif;
+      background-color: #f0f0f0;
+      margin: 20px;
+      padding: 0;
+    }
+
+    h1, h2 {
+      color: #484848;
+      text-align: center;
+    }
+
+    li::marker {
+      color: #484848;
+    }
+    /* Navigation Bar */
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+      padding: 10px 0;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .navbar a:hover {
+      background-color: #f0f0f0;
+      color: black;
+    }
+
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 17px;  
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 20px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+    /* CSS Grid for Images */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .grid-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .grid-item img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Image Container Styling */
+    .image-container {
+      position: relative;
+    }
+
+    .image-container img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      font-size: 50px;
+      text-align: center;
+      transition: background-color 0.3s;
+    }
+
+    .overlay:hover {
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    /* Card Styling */
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      font-size: 20px;
+      colour: #484848;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    /* Buttons */
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    /* Forms Styling */
+    form {
+      margin: 0px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    label, input[type="radio"], input[type="checkbox"] {
+      margin-bottom: 10px;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <a href="#home" href="https://www.freepik.com/free-photos-vectors/dog" target="_blank">Home</a>
+    <a href="https://www.freepik.com/free-photos-vectors/dog" target="_blank">Gallery</a>
+    <div class="dropdown">
+      <button class="dropbtn">More 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#form">Dog Form</a>
+        <a href="https://www.reddit.com/r/dogvideos/" target="_blank">Dog Videos</a>
+      </div>
+    </div> 
+  </div>
+
+  <!-- Image with Text Overlay -->
+  <div class="image-container">
+    <img src="https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA4L3Jhd3BpeGVsX29mZmljZV8xNV9waG90b19vZl9hX2RvZ19ydW5uaW5nX3dpdGhfb3duZXJfYXRfcGFya19lcF9mM2I3MDQyZC0zNWJlLTRlMTQtOGZhNy1kY2Q2OWQ1YzQzZjlfMi5qcGc.jpg" alt="Image description">
+    <div class="overlay">All Things Dogs</div>
+  </div>
+
+  <br>
+  <br>
+
+  <h1>Dog Photos</h1>
+
+  <!-- Image Grid -->
+  <div class="grid-container">
+    <div class="grid-item">
+      <img src="https://rukminim2.flixcart.com/image/850/1000/l071d3k0/poster/q/u/k/medium-cute-dogs-cute-puppies-pomeranian-fulffy-dog-golden-original-imagcf8wgyxqkeuf.jpeg?q=90&crop=false" alt="Dog 1">
+    </div>
+    <div class="grid-item">
+      <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg" alt="Dog 2">
+    </div>
+    <div class="grid-item">
+      <img src="https://pawstro.com//wp-content/uploads/2022/06/indiandog.jpg" alt="Dog 3">
+    </div>
+  </div>
+  <br>
+  <br>
+
+  <!-- Dog Information -->
+  <div class="card">
+    <h1>Things that dogs like</h1>
+    <ul>
+      <li style="color:#484848">Physical Affection</li>
+      <li style="color:#484848">Treats</li>
+      <li style="color:#484848">Play</li>
+    </ul>
+    <img src="https://img.freepik.com/premium-photo/there-are-two-dogs-running-grass-together-generative-ai_900370-48955.jpg" alt="Dog Playing" width="100%">
+  </div>
+
+  <div class="card">
+    <h1>Top 3 things dogs hate</h1>
+    <ol>
+      <li style="color:#484848">Lack of a routine</li>
+      <li style="color:#484848">Yelling</li>
+      <li style="color:#484848">Being ignored</li>
+    </ol>
+    <img src="https://images.squarespace-cdn.com/content/v1/5f273fcf1b758a548b6b2d84/593977e6-47af-4b3a-bd97-456f9170fa56/BW.feature.RenVolpe.0122.jpg" alt="Dog Being Ignored" width="100%">
+  </div>
+  <br>
+  <br>
+
+  <!-- Dog Form -->
+  <h1>Dog Form</h1>
+  <div id="form">
+    <p>Which type of fur colour does your dog have?</p>
+    <form>
+      <input type="radio" id="single" name="type_dog" value="Single coloured">
+      <label for="single">Single coloured</label><br>
+      <input type="radio" id="multi" name="type_dog" value="Multi-coloured">
+      <label for="multi">Multi-coloured</label><br>
+    </form>
+
+    <p>Which personality does your dog have?</p>
+    <form>
+      <input type="checkbox" id="leader" name="personality_dog" value="Leader">
+      <label for="leader">Leader</label><br>
+      <input type="checkbox" id="follower" name="personality_dog" value="Follower">
+      <label for="follower">Follower</label><br>
+      <input type="checkbox" id="aloof" name="personality_dog" value="Aloof">
+      <label for="aloof">Aloof</label><br>
+      <input type="checkbox" id="shy" name="personality_dog" value="Shy">
+      <label for="shy">Shy</label><br>
+    </form>
+    
+    <br>
+
+    <form action="https://www.reddit.com/r/dogvideos/">
+      <label for="yourdog">What do you love most about your dog?</label>
+      <input type="text" id="yourdog" name="yourdog" placeholder="Share your thoughts...">
+      <input type="submit">
+    </form>
+  </div>
+  <br>
+<footer>
+    <p>&copy; 2024 All Things Dogs</p>
+  </footer>
+
+</body>
+</html>
